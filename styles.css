@@ -29,8 +29,9 @@ p, h1, h2, h3, h4, h5, h6 {
 /* My CSS */
 :root {
     --darkest-gray: #000;
-    --darker-gray: #333;
-    --dark-gray: #666;
+    --darker-gray: #222;
+    --dark-gray: #444;
+    --gray: #666;
     --text-color: white;
     --button-color: rgb(248, 0, 166);
 }
@@ -118,8 +119,13 @@ body {
 .operator-buttons .button {
     background-color: var(--button-color);
 }
-.left-buttons .button {
+
+.function-buttons .button {
     background-color: var(--dark-gray);
+}
+
+.number-buttons .button {
+    background-color: var(--gray);
 }
 
 .zero {
