@@ -35,6 +35,15 @@ p, h1, h2, h3, h4, h5, h6 {
     --text-color: white;
     --button-color: rgb(248, 0, 166);
     --border-color: var(--darkest-gray);
+    --top-border-color: #aaa;
+    --page-background: rgb(254, 194, 218);
+
+    --shadow-color: 336deg 42% 54%;
+    --shadow-elevation-medium:
+    0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.36),
+    0.8px 1.6px 2px -0.8px hsl(var(--shadow-color) / 0.36),
+    2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-color) / 0.36),
+    5px 10px 12.6px -2.5px hsl(var(--shadow-color) / 0.36);
 }
 
 body {
@@ -42,6 +51,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: var(--page-background);
 }
 
 .calculator {
@@ -49,7 +59,11 @@ body {
     height: 400px; */
     background: var(--darker-gray);
     border-radius: 10px;
-    border: 2px solid var(--border-color);
+    border: 1px solid var(--border-color);
+    border-top-color: var(--top-border-color);
+    border-left-color: var(--top-border-color);
+
+    box-shadow: var(--shadow-elevation-medium);
 
     display: flex;
     flex-direction: column;
@@ -113,7 +127,6 @@ body {
     width: 60px;
     height: 60px;
     color: var(--text-color);
-    border: 1px solid var(--border-color);
     border-radius: 30px;
     text-align: center;
     user-select: none;
@@ -125,14 +138,20 @@ body {
 
 .operator-buttons .button {
     background-color: var(--button-color);
+    border: 1px solid var(--page-background);
+
 }
 
 .function-buttons .button {
     background-color: var(--dark-gray);
+    border: 1px solid var(--top-border-color);
+
 }
 
 .number-buttons .button {
     background-color: var(--gray);
+    border: 1px solid var(--top-border-color);
+
 }
 
 .zero {
