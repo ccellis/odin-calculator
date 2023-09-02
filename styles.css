@@ -52,6 +52,10 @@ body {
     align-items: center;
     justify-content: center;
     background-color: var(--page-background);
+
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 30px;
+    font-weight: lighter
 }
 
 .calculator {
