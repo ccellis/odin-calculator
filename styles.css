@@ -27,9 +27,9 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 /* My CSS */
-* {
+/* * {
     border: 1px solid red;
-}
+} */
 
 body {
     min-height : 100vh;
@@ -43,6 +43,7 @@ body {
     /* width: 300px;
     height: 400px; */
     background: honeydew;
+    border-radius: 10px;
 
     display: flex;
     flex-direction: column;
@@ -51,6 +52,8 @@ body {
 
 .screen {
     background-color: gray;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     padding: 10px;
     text-align: right;
 }
@@ -96,13 +99,17 @@ body {
 }
 
 .button {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     background-color: pink;
-    border-radius: 20px;
+    border-radius: 30px;
     text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .zero {
-    width: 90px;
+    width: 130px; /* 2x button width + gap */
 }
