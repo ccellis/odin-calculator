@@ -27,22 +27,25 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 /* My CSS */
-/* * {
-    border: 1px solid red;
-} */
+:root {
+    --darkest-gray: #000;
+    --darker-gray: #333;
+    --dark-gray: #666;
+    --text-color: white;
+    --button-color: rgb(248, 0, 166);
+}
 
 body {
     min-height : 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid black;
 }
 
 .calculator {
     /* width: 300px;
     height: 400px; */
-    background: honeydew;
+    background: var(--darker-gray);
     border-radius: 10px;
 
     display: flex;
@@ -51,7 +54,8 @@ body {
 }
 
 .screen {
-    background-color: gray;
+    background-color: var(--darkest-gray);
+    color: var(--text-color);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     padding: 10px;
@@ -101,13 +105,21 @@ body {
 .button {
     width: 60px;
     height: 60px;
-    background-color: pink;
+    color: var(--text-color);
     border-radius: 30px;
     text-align: center;
+    user-select: none;
 
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.operator-buttons .button {
+    background-color: var(--button-color);
+}
+.left-buttons .button {
+    background-color: var(--dark-gray);
 }
 
 .zero {
