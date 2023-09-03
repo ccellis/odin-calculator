@@ -134,10 +134,18 @@ body {
     border-radius: 30px;
     text-align: center;
     user-select: none;
+    cursor: pointer;
+
+    transition: all .04s ease;
 
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.clicked {
+    filter: brightness(60%);
+    transform: translateY(2px);
 }
 
 .operator-buttons .button {
