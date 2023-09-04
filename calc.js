@@ -5,6 +5,14 @@ function clickedButton(e) {
         clickedNumber(this.textContent);
     else if (this.classList.contains("zero"))
         clickedZero();
+    else if (this.classList.contains("ac"))
+        clickedAC();
+    else if (this.classList.contains("c"))
+        clickedC();
+    else if (this.classList.contains("sign"))
+        clickedSign();
+
+        screen.textContent = currentNumber;
 }
 
 function removeTransition(e) {
@@ -17,15 +25,26 @@ function clickedNumber(num) {
         currentNumber = num;
     else if (currentNumber.length < 15)
         currentNumber += num;
-
-    screen.textContent = currentNumber;
 }
 
 function clickedZero() {
     if (currentNumber !== "0" && currentNumber.length < 15)
         currentNumber += "0";
+}
 
-    screen.textContent = currentNumber;
+function clickedAC() {
+    currentNumber = "0";
+}
+
+function clickedC() {
+    currentNumber = "0";
+}
+
+function clickedSign() {
+    if (currentNumber[0] === "-")
+        currentNumber = currentNumber.slice(1);
+    else if (currentNumber !== "0") // Don't add a negative sign to 0
+        currentNumber = "-" + currentNumber;
 }
 
 let currentNumber = "0";
