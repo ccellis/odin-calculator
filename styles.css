@@ -148,6 +148,14 @@ body {
     transform: translateY(2px);
 }
 
+.highlighted {
+    filter: brightness(140%);
+}
+
+.unclickable {
+    cursor:default;
+}
+
 .operator-buttons .button {
     background-color: var(--button-color);
     border: 1px solid var(--page-background);
@@ -166,6 +174,6 @@ body {
 
 }
 
-.zero {
+.zero, .c {
     width: 130px; /* 2x button width + gap */
 }
