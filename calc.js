@@ -3,6 +3,8 @@ function clickedButton(e) {
 
     if (this.classList.contains("number"))
         clickedNumber(this.textContent);
+    else if (this.classList.contains("zero"))
+        clickedZero();
 }
 
 function removeTransition(e) {
@@ -15,6 +17,13 @@ function clickedNumber(num) {
         currentNumber = num;
     else if (currentNumber.length < 15)
         currentNumber += num;
+
+    screen.textContent = currentNumber;
+}
+
+function clickedZero() {
+    if (currentNumber !== "0" && currentNumber.length < 15)
+        currentNumber += "0";
 
     screen.textContent = currentNumber;
 }
