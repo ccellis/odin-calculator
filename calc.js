@@ -11,8 +11,10 @@ function clickedButton(e) {
         clickedC();
     else if (this.classList.contains("sign"))
         clickedSign();
+    else if (this.classList.contains("period"))
+        clickedPeriod();
 
-        screen.textContent = currentNumber;
+    screen.textContent = currentNumber;
 }
 
 function removeTransition(e) {
@@ -45,6 +47,11 @@ function clickedSign() {
         currentNumber = currentNumber.slice(1);
     else if (currentNumber !== "0") // Don't add a negative sign to 0
         currentNumber = "-" + currentNumber;
+}
+
+function clickedPeriod() {
+    if (!currentNumber.includes("."))
+        currentNumber += ".";
 }
 
 let currentNumber = "0";
